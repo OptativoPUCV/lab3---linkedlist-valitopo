@@ -183,7 +183,24 @@ void * popFront(List * list) {
 }
 
 void * popBack(List * list) {
+    if (list == NULL) {
+        return NULL;
+    }
+    if (list->tail == NULL) {
+        return NULL;
+    }
+    Node * aux = list->tail;
+    list->tail = list->tail->prev;
+    if (list->tail != NULL)
+    {
+        list->tail->next = NULL;
+    }
+    else
+    {
+        list->head = NULL;
+    }
     list->current = list->tail;
+    return aux->data;
     return popCurrent(list);
 }
 
