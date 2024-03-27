@@ -109,3 +109,14 @@ Wed 27 Mar 2024 08:46:44 PM UTC:
  tests:  10|2
 total_score: 45/70
 941b20c
+Wed 27 Mar 2024 08:48:49 PM UTC: 
+ list.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘popFront’:
+list.c:164:12: error: unused variable ‘aux’ [-Werror=unused-variable]
+  164 |     Node * aux = list->head;
+      |            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+d00e0cd
