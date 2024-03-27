@@ -172,7 +172,7 @@ void * popFront(List * list) {
         list->tail = NULL;
     }
     list->current = list->head;  
-    return popCurrent(list);
+    return aux->data;
 }
 
 void * popBack(List * list) {
