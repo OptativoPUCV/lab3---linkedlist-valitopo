@@ -14,3 +14,20 @@ list.c:38:1: error: expected identifier or ‘(’ before ‘}’ token
       | ^
 Compilation failed
 36462aa
+Wed 27 Mar 2024 08:28:37 PM UTC: 
+ list.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+In file included from test.c:5:
+list.c:34:6: error: expected identifier or ‘(’ before ‘return’
+   34 |      return NULL;
+      |      ^~~~~~
+list.c:35:1: error: expected identifier or ‘(’ before ‘}’ token
+   35 | }
+      | ^
+list.c: In function ‘createList’:
+list.c:33:1: error: control reaches end of non-void function [-Werror=return-type]
+   33 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+f01377f
