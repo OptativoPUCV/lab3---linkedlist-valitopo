@@ -149,8 +149,13 @@ void pushCurrent(List * list, void * data) {
         new->next = list->current->next;
         new->prev = list->current;
         list->current->next = new;
+        if (new->next != NULL)
+        {
+            new->next->prev = new;
+        }
     }
     list->current = new;
+    
   
 }
 
